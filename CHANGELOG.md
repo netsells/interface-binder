@@ -12,3 +12,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Major Versions
 * [1.0.0](#400---2021-01-09) - Initial release
+* [1.0.1](#400---2021-01-09) - Minor bug fix
