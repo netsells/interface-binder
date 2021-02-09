@@ -14,13 +14,6 @@ abstract class TestCase extends BaseTestCase
     public function setup(): void
     {
         parent::setup();
-
-        $this->app->config->set(
-            "interface-binder.directories",
-            [
-                __DIR__ . '/TestInterfaces',
-            ]
-        );
     }
 
     protected function getPackageProviders($app)
@@ -28,6 +21,18 @@ abstract class TestCase extends BaseTestCase
         return [
             InterfaceBinderServiceProvider::class,
         ];
+    }
+
+    protected function resolveApplicationConfiguration($app)
+    {
+        parent::resolveApplicationConfiguration($app);
+
+        $app->config->set(
+            "interface-binder.directories",
+            [
+                __DIR__ . '/TestInterfaces',
+            ]
+        );
     }
 
     protected function getEnvironmentSetUp($app)
