@@ -1,5 +1,5 @@
 # Interface Binder
-Interface binder provides an easy way to bind interfaces to implementations within a given array of directories
+Interface binder provides an easy way to bind interfaces to implementations within a given array of directories.
 
 ## Installation
 
@@ -35,7 +35,7 @@ return [
 ];
 ```
 
-Then all you need to do is give the interface you whish to bind a `BoundTo` attribute to tell the `Binder` which conrete class you wish to bind it to.
+Then all you need to do is give the interface you whish to bind a `BoundTo` attribute to tell the `Binder` which concrete class you wish to bind it to:
 
 ```php
 namespace App\Features\CodeVerifier;
@@ -50,7 +50,7 @@ interface UserCodeVerifierInterface
 
 ```
 
-Which is implemented by the following concrete class
+Which is implemented by the following concrete class:
 
 ```php
 namespace App\Features\CodeVerifier;
