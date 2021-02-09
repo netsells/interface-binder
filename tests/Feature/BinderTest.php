@@ -10,7 +10,7 @@ use Netsells\InterfaceBinder\Tests\TestInterfaces\TestOne\TestInterfaceOne;
 use Netsells\InterfaceBinder\Tests\TestInterfaces\TestThree\TestClassThree;
 use Netsells\InterfaceBinder\Tests\TestInterfaces\TestTwo\TestInterfaceTwo;
 
-class FilterFactoryTest extends TestCase
+class BinderTest extends TestCase
 {
     public function testBindsInterfacesInSameDirectoryAsClass(): void
     {
