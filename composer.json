@@ -1,0 +1,34 @@
+{
+    "name": "netsells/interface-binder",
+    "description": "A simple package that allows you to bind interfaces to concrete classes using PHP8 attributes",
+    "type": "library",
+    "license": "MIT",
+     "keywords": [
+        "attributes",
+        "interface",
+        "binder"
+    ],
+    "authors": [
+        {
+            "name": "Adam Hutchison",
+            "email": "adam.hutchison@netsells.co.uk"
+        },
+        {
+            "name": "Sam Jordan",
+            "email": "sam@netsells.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "netsells/attribute-finder": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netsells\\InterfaceBinder\\": "src",
+            "Netsells\\InterfaceBinder\\Tests\\": "tests"
+        }
+    }
+}
