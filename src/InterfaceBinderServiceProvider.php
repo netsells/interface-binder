@@ -17,6 +17,6 @@ class InterfaceBinderServiceProvider extends ServiceProvider
     {
         $this->app->bind(BinderInterface::class, Binder::class);
 
-        app(BinderInterface::class)->bindInterfaces(config('interface-binder.directories'));
+        app(BinderInterface::class)->bindInterfaces(config('interface-binder.directories', []));
     }
 }
