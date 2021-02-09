@@ -2,7 +2,9 @@
 
 namespace Netsells\InterfaceBinder;
 
-#[BoundTo(Binder::class)]
+use Netsells\InterfaceBinder\Attributes\BoundTo;
+use Netsells\InterfaceBinder\Exceptions\InvalidInterfaceBindingException;
+
 interface BinderInterface
 {
     /**

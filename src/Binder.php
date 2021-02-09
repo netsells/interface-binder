@@ -4,6 +4,8 @@ namespace Netsells\InterfaceBinder;
 
 use Illuminate\Support\Facades\App;
 use Netsells\AttributeFinder\AttributeFinder;
+use Netsells\InterfaceBinder\Attributes\BoundTo;
+use Netsells\InterfaceBinder\Exceptions\InvalidInterfaceBindingException;
 
 class Binder implements BinderInterface
 {

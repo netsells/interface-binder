@@ -5,26 +5,34 @@ Interface binder provides an easy way to bind interfaces to implementations with
 
 using composer:
 
-```
+```bash
 composer require netsells/interface-binder
 ```
 
+Then publish the config file using the following artisan command:
+```bash
+php artisan vendor:publish --tag=interface-binder
+```
+
+
 ## Usage
 
-Add the following to the `register` method in your `AppServiceProvider`:
+Add the directories you want to scan for interfaces to the `directories` array in the `interface-binder.php` config file:
 
 ```php
-public function register()
-{
-    app(Binder::class)
-        ->bindInterfaces(
-            [
-                // Directories where interfaces are located
-                base_path('app/Features'),
-                base_path('app/Services'),
-            ]
-        );
-}
+return [
+    /*
+    |--------------------------------------------------------------------------
+    | Directories to scan for interfaces
+    |--------------------------------------------------------------------------
+    |
+    */
+
+    'directories' => [
+        app_path('Features'),
+        app_path('Services'),
+    ],
+];
 ```
 
 Then all you need to do is give the interface you whish to bind a `BoundTo` attribute to tell the `Binder` which conrete class you wish to bind it to.

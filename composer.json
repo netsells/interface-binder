@@ -23,7 +23,15 @@
         "netsells/attribute-finder": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.4"
+        "phpunit/phpunit": "^9.4",
+        "orchestra/testbench": "^6.11"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Netsells\\InterfaceBinder\\InterfaceBinderServiceProvider"
+            ]
+        }
     },
     "autoload": {
         "psr-4": {

@@ -1,0 +1,9 @@
+.idea
+.vscode
+composer.lock
+vendor
+.phpunit.result.cache
+.env
+
+docker-compose.yml
+/docker

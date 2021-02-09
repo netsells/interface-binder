@@ -1,6 +1,6 @@
 <?php
 
-namespace Netsells\InterfaceBinder;
+namespace Netsells\InterfaceBinder\Exceptions;
 
 use Exception;
 

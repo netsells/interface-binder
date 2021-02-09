@@ -1,6 +1,6 @@
 <?php
 
-namespace Netsells\InterfaceBinder;
+namespace Netsells\InterfaceBinder\Attributes;
 
 #[\Attribute]
 final class BoundTo
