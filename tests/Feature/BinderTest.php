@@ -2,6 +2,8 @@
 
 namespace Netsells\InterfaceBinder\Tests\Feature;
 
+use Netsells\InterfaceBinder\BinderInterface;
+use Netsells\InterfaceBinder\Exceptions\InvalidInterfaceBindingException;
 use Netsells\InterfaceBinder\Tests\TestCase;
 use Netsells\InterfaceBinder\Tests\TestInterfaces\TestClassTwo;
 use Netsells\InterfaceBinder\Tests\TestInterfaces\TestInterfaceThree;
@@ -18,13 +20,13 @@ class BinderTest extends TestCase
         $this->assertEquals(TestClassOne::class, $class::class);
     }
 
-    public function testBindsToClassInParentDirectory()
+    public function testBindsToClassInParentDirectory(): void
     {
         $class = app(TestInterfaceTwo::class);
         $this->assertEquals(TestClassTwo::class, $class::class);
     }
 
-    public function testBindsToClassInSubDirectory()
+    public function testBindsToClassInSubDirectory(): void
     {
         $class = app(TestInterfaceThree::class);
         $this->assertEquals(TestClassThree::class, $class::class);
